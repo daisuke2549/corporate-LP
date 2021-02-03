@@ -87,6 +87,14 @@ header {
   padding: 10px;
 }
 
+.navi-btn {
+  display: none;
+}
+
+.navi-menu {
+  display: none;
+}
+
 /*about section*/
 .about-section-header h3 {
   font-size: 28px;
@@ -268,7 +276,7 @@ header {
 .accordion-container .accordion-title:hover,
 .accordion-container .accordion-title:active,
 .accordion-container .content-entry.open .accordion-title {
-  background-color: #00aaa7;
+  background-color: #0079c1;
   color: white;
 }
 
@@ -306,7 +314,12 @@ header {
 
 .accordion-content {
   display: none;
-  padding-left: 2.3125em;
+  padding-left: 0.3125em;
+}
+
+.accordion-content p {
+  text-align: left;
+  margin-left: 2rem;
 }
 
 /* CSS for CodePen */
@@ -375,5 +388,192 @@ header {
 .copyright p {
   padding: 0 auto;
   margin-bottom: 10px;
+}
+
+/*レスポンシブデザイン*/
+@media screen and (max-width: 768px) {
+  /*共通部分*/
+  .section-title h2 {
+    color: #D4AD60;
+    font-size: 22px;
+  }
+  /*ヘッダー*/
+  .header-title h1 {
+    font-size: 24px;
+  }
+  .header-title p {
+    font-size: 12px;
+  }
+  .navi-btn {
+    display: block;
+  }
+  .navi-menu {
+    display: block;
+  }
+  .br-pc {
+    display: none;
+  }
+  /*レスポンシブ ハンバーガーメニュー*/
+  .navi-btn {
+    width: 50px;
+    height: 62px;
+    position: relative;
+    top: -700px;
+    left: 10px;
+    cursor: pointer;
+  }
+  .navi-btn span {
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 5px;
+    background: #252525;
+    border-radius: 5px;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+  }
+  .navi-btn span:nth-of-type(2) {
+    top: 18px;
+    opacity: 1;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+  }
+  .navi-btn span:last-of-type {
+    top: 36px;
+  }
+  .navi-btn p {
+    color: #252525;
+    text-align: center;
+    position: absolute;
+    top: 45px;
+    left: 2px;
+  }
+  .navi-btn-on span:first-of-type {
+    -webkit-transform: rotate(-45deg) translateY(16px) translateX(-13px);
+            transform: rotate(-45deg) translateY(16px) translateX(-13px);
+  }
+  .navi-btn-on span:nth-of-type(2) {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 0;
+  }
+  .navi-btn-on span:last-of-type {
+    -webkit-transform: rotate(45deg) translateY(-13px) translateX(-9px);
+            transform: rotate(45deg) translateY(-13px) translateX(-9px);
+  }
+  .navi-menu {
+    top: 80px;
+    display: none;
+    background: #252525;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    overflow-y: auto;
+  }
+  .navi-menu li {
+    list-style-type: none;
+  }
+  .navi-menu li a {
+    display: block;
+    color: #e7efe7;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 5px 30px;
+  }
+  /*レスポンシブ about section*/
+  .about-section-header h3 {
+    font-size: 20px;
+  }
+  .about-section-header p {
+    font-size: 14px;
+  }
+  .about-section-header h3 {
+    font-size: 22px;
+  }
+  .about-section-bottom-part-top h3 {
+    font-size: 20px;
+  }
+  .gnav {
+    display: none;
+  }
+  .about-section-bottom-part-bottom p {
+    font-size: 14px;
+  }
+  /*レスポンシブ topic section*/
+  .topic-info {
+    display: block;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+  }
+  .topic-date {
+    display: inline;
+  }
+  /*レスポンシブ management section*/
+  .management-section-top-title h3 {
+    font-size: 22px;
+  }
+  .card__items {
+    display: block;
+    margin-top: 56px;
+    margin: 0 auto;
+  }
+  .card__item {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .media {
+    overflow: hidden;
+    background: #fff;
+    border-radius: 4px;
+    padding: 16px 16px 14px;
+    display: block;
+    text-decoration: none;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+  }
+  .media__img {
+    text-align: center;
+  }
+  .card__item:nth-child(3n) {
+    margin: 0 auto;
+  }
+  /*レスポンシブ service section*/
+  .service-items {
+    text-align: center;
+    display: block;
+  }
+  .accordion-title {
+    display: inline;
+    text-align: center;
+  }
+  .accordion-content {
+    display: none;
+  }
+  .accordion-content p {
+    text-align: center;
+  }
+  /*レスポンシブ recruit section*/
+  .recruit-site-link {
+    display: block;
+  }
+  .recruit-site-link-url p {
+    margin-top: 0px;
+  }
+  .recruit-site-link-img {
+    width: 50%;
+    margin: 0 auto;
+    margin-top: -100px;
+  }
+  .group-companys {
+    display: block;
+    margin: o auto;
+  }
+  .group-company {
+    text-align: center;
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=style.css.map */
